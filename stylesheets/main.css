@@ -11,9 +11,6 @@ h1, h2, p, span, .title, .emoji-content, .enter-content{
 .menu-text{
   color: #FFF;
 }
-div{
-
-}
 textarea{
   position: absolute;
   width: 0px;
@@ -29,7 +26,14 @@ textarea{
 .footer-smiley, .footer-mail, .footer-insta, .header-work, .header-about, .img-caroussel-wrapper{
   cursor: pointer;
 }
-
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
 /* visited link */
 a:visited {
   color: #0000FF;
