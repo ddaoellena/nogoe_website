@@ -1,9 +1,15 @@
 function appendWork(){
   $("#header-content").load("./assets/html/work.html");
+  setTimeout(function(){
+    document.querySelector("#work-content").classList.add("displayed");
+  }, 100);
 }
 
 function appendAbout(){
   $("#header-content").load("./assets/html/about.html");
+  setTimeout(function(){
+    document.querySelector("#about-content").classList.add("displayed");
+  }, 100);
 }
 
 function appendProject(el){
