@@ -7,62 +7,59 @@
     <link rel="stylesheet" href="./stylesheets/content.css">
     <link rel="stylesheet" href="./stylesheets/responsive.css">
   </head>
+
   <body>
+    <div class="header-wrapper" id="header-wrapper">
+      <h1 class="header-work" onclick="toggleWork();">work</h1>
+      <h1 class="header-about" onclick="toggleAbout();">about</h1>
+      <div class="header-content" id="header-content"></div>
+    </div>
 
-<div class="header-wrapper" id="header-wrapper">
-  <h1 class="header-work" onclick="toggleWork();">work</h1>
-  <h1 class="header-about" onclick="toggleAbout();">about</h1>
-  <div class="header-content" id="header-content"></div>
-</div>
-
-<div class="caroussel-wrapper">
-  <div class="caroussel-content displayed" id="caroussel-content">
-    <div class="img-caroussel-wrapper">
-      <img class="img-caroussel" id="img-caroussel-1" src="./assets/pics/test-1.jpg" alt="">
-    </div>
-    <div class="img-caroussel-wrapper">
-      <img class="img-caroussel" id="img-caroussel-2" src="./assets/pics/test-2.jpg" alt="">
-    </div>
-    <div class="img-caroussel-wrapper">
-      <img class="img-caroussel" id="img-caroussel-3" src="./assets/pics/test-3.jpg" alt="">
-    </div>
-    <div class="img-caroussel-wrapper">
-      <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/test-4.jpg" alt="">
-    </div>
-    <div class="img-caroussel-wrapper">
-      <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/test-5.jpg" alt="">
-    </div>
-  </div>
-  <div class="project-content-wrapper hidden" id="project-content-wrapper">
-    <div class="project-text-wrapper">
-      <div class="project-title-div">
-        <span class="title-arrow">↘</span>
-        <h2 class="project-title" id="project-title"></h2>
+    <div class="caroussel-wrapper">
+      <div class="caroussel-content displayed" id="caroussel-content">
+        <div class="img-caroussel-wrapper">
+          <img class="img-caroussel" id="img-caroussel-1" src="./assets/pics/test-1.jpg" alt="">
+        </div>
+        <div class="img-caroussel-wrapper">
+          <img class="img-caroussel" id="img-caroussel-2" src="./assets/pics/test-2.jpg" alt="">
+        </div>
+        <div class="img-caroussel-wrapper">
+          <img class="img-caroussel" id="img-caroussel-3" src="./assets/pics/test-3.jpg" alt="">
+        </div>
+        <div class="img-caroussel-wrapper">
+          <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/test-4.jpg" alt="">
+        </div>
+        <div class="img-caroussel-wrapper">
+          <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/test-5.jpg" alt="">
+        </div>
       </div>
-      <p class="project-subtitle" id="project-subtitle"></p>
-      <p class="project-desc" id="project-desc"></p>
+      <div class="project-content-wrapper hidden" id="project-content-wrapper">
+        <div class="project-text-wrapper">
+          <div class="project-title-div">
+            <span class="title-arrow">↘</span>
+            <h2 class="project-title" id="project-title"></h2>
+          </div>
+          <p class="project-subtitle" id="project-subtitle"></p>
+          <p class="project-desc" id="project-desc"></p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="footer-wrapper">
-</div>
+    <div class="side-wrapper">
+      <h1 class="side-emoji">ψ(｀∇´)ψ( ′～‵)(ｉДｉ)(´･ω･｀)(゜￢゜)   </h1>
+    </div>
 
-<div class="side-wrapper">
-  <h1 class="side-emoji">ψ(｀∇´)ψ( ′～‵)(ｉДｉ)(´･ω･｀)(゜￢゜)   </h1>
-</div>
+    <div class="footer-wrapper">
+      <div class="footer-smiley" onclick="runEasterEgg()"></div>
+      <h1 class="copied-text" id="copied-text" style="display:none">Mail address copied !</h1>
+      <h1 class="footer-mail" id="mail-icon" onclick="copyMail();">✉</h1>
+      <h1 class="footer-insta"><a href="https://www.instagram.com/kawa___ninja/" target="_blank" style="text-decoration: none">📸</a></h1>
+      <textarea name="name" id="to-copy">kawakita.travail@gmail.com</textarea>
+    </div>
 
-<div class="footer-wrapper">
-  <div class="footer-smiley">
-  </div>
-  <h1 class="copied-text" id="copied-text" style="display:none">Mail address copied !</h1>
-  <h1 class="footer-mail" id="mail-icon" onclick="copyMail();">✉</h1>
-  <h1 class="footer-insta"><a href="https://www.instagram.com/kawa___ninja/" target="_blank" style="text-decoration: none">📸</a></h1>
-  <textarea name="name" id="to-copy">kawakita.travail@gmail.com</textarea>  
-</div>
-
-
+  <canvas class="easter-canvas" id="easter-canvas"></canvas>
   </body>
+
   <script src="./assets/data/projects.js" charset="utf-8"></script>
   <!-- Libs Javascript -->
   <script src="./libs/jquery-3.4.1.min.js" charset="utf-8"></script>
