@@ -1,0 +1,55 @@
+@media screen and (min-width: 800px) and (max-width: 1440px) {
+  .text-list{
+    line-height: 0.5em;
+  }
+  .text-body{
+    line-height: 1.5em;
+  }
+  .header-wrapper{
+    height: 50px;
+  }
+  .header-wrapper.expanded{
+    height: 130px;
+  }
+  .header-wrapper.full-expanded{
+    height: calc(100% - 50px);
+  }
+  .header-content{
+    top: 50px;
+  }
+  .header-about{
+    margin-right: 70px;
+  }
+  .footer-wrapper{
+    height: 50px;
+  }
+  .footer-smiley{
+    width: 37px;
+    height: 37px;
+    margin-left: 18px;
+    margin-top:7px;
+  }
+  .footer-mail{
+    top: 3px;
+    margin-right: 70px;
+  }
+  .footer-insta{
+    top: 3px;
+    margin-right: 120px;
+  }
+  .side-wrapper{
+    right: 50px;
+    height:  50px;
+  }
+  .caroussel-wrapper{
+    top: 50px;
+    width: calc(100% - 50px);
+    height: calc(100% - 100px);
+  }
+  .title-arrow{
+    font-size: 2em;
+  }
+  .project-subtitle, .project-desc{
+    margin-left: 22px;
+  }
+}

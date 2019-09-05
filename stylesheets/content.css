@@ -1,0 +1,85 @@
+/* ABOUT */
+.about-content{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: auto;
+  margin-left: 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.experience-div{
+  height: 100%;
+  flex: 1;
+}
+
+.about-wink-div{
+  height: 100%;
+  flex: 1.5;
+}
+.interests-div{
+  height: 100%;
+  flex: 1;
+}
+.wink-div{
+  border: 1px solid white;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  height: 10vw;
+  width: 10vw;
+}
+.wink-text{
+  text-align: center;
+}
+/* WORK */
+.work-content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-left: 10px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.print-work-div{
+  margin-left: 5px;
+  padding-right: 20px;
+  flex: 1;
+}
+.digital-work-div{
+  padding-right: 20px;
+  flex: 1;
+}
+.transmedia-work-div{
+  padding-right: 20px;
+  flex: 1;
+}
+.work-arrow{
+  display: inline-block;
+  font-size: 2em;
+  margin-right: 10px;
+}
+.work-text{
+  display: inline-block;
+}
+.work-category{
+  margin-right: 10px;
+}
+.work-link{
+  opacity: 0.66;
+  cursor: pointer;
+  transition: opacity 500ms;
+}
+.work-link.active{
+  opacity: 1;
+}
+.work-link:hover{
+  opacity: 1;
+}
+
+.about-content.hidden, .work-content.hidden{
+  display: none;
+}
