@@ -1,12 +1,13 @@
 var increment = 0;
+var carousselContent = document.querySelector("#caroussel-content");
+var slideCollapsed = false;
+
 function slideShow(){
 }
 function slideOneImage(){
-  var carousselContent = document.querySelector("#caroussel-content");
-
   setInterval(function(){
     increment++;
-     if (increment >= 6) {clearInterval(this);}
+     if (slideCollapsed == true) {clearInterval(this);}
      else {
        carousselContent.style.left = -increment*100 +"%";
        console.log(increment);

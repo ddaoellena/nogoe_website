@@ -13,13 +13,13 @@ function toggleWork(){
     headerWrapper.classList.remove("full-expanded");
     headerWrapper.classList.add("expanded");
     appendWork();
-    setTimeout(setCurrentActiveProject, 100);
+    setTimeout(setCurrentActiveProject, 200);
   } else {
     headerWrapper.classList.add("expanded");
     setTimeout(function(){
       appendWork();
     }, 100);
-    setTimeout(setCurrentActiveProject, 100);
+    setTimeout(setCurrentActiveProject, 200);
   }
 }
 
@@ -50,6 +50,11 @@ function toggleAbout(){
 
 function openProject(el){
   headerWrapper.classList.remove("expanded");
+  if (slideCollapsed == false) {
+    document.querySelector("#caroussel-content").remove();
+    document.querySelector("#project-content-wrapper").classList.add("displayed");
+    slideCollapsed = true;
+  }
   document.querySelector("#work-content").classList.remove("displayed");
   setTimeout(function(){
     document.querySelector("#work-content").classList.add("hidden");
