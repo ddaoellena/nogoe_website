@@ -5,7 +5,7 @@
 body{
   overflow: hidden;
 }
-h1, h2, p, span, .title{
+h1, h2, p, span, .title, .emoji-content, .enter-content{
   font-family: "VG5000";
 }
 .menu-text{
@@ -45,8 +45,8 @@ a:hover, .footer-mail:hover, .footer-smiley:hover, .header-work:hover, .header-a
   background-position: center;
   background-size: auto 100%;
 }
- /* HEADER  */
 
+ /* HEADER  */
 .header-wrapper{
   border-bottom:1px solid black;
   top: 0;
@@ -74,7 +74,6 @@ a:hover, .footer-mail:hover, .footer-smiley:hover, .header-work:hover, .header-a
 
 
 /* FOOTER */
-
 .footer-wrapper{
   border-top:1px solid black;
   bottom: 0;
@@ -102,30 +101,21 @@ a:hover, .footer-mail:hover, .footer-smiley:hover, .header-work:hover, .header-a
   color: #0000FF;
 }
 
-
-
 .side-wrapper{
   border-bottom:1px solid #0000FF;
   bottom: 0;
-  width:  100vh;
+  width: 100vh;
+  max-width: 100%;
   background-color: #FFF;
   transform-origin: bottom right;
   transform: rotate(90deg);
   line-height: 0px;
 }
 
-.side-emoji{
-  /* METTRE ICI SCROLL*/
-  /* Starting position */
+.emoji-content.emoji-content-index{
   color: #0000FF;
-  -moz-transform:translateX(100%);
-  -webkit-transform:translateX(100%);
-  transform:translateX(100%);
-  /* Apply animation to this element */
-  -moz-animation: scroll-left 10s linear infinite;
-  -webkit-animation: scroll-left 10s linear infinite;
-  animation: scroll-left 10s linear infinite;
 }
+
 /* Carousel & content */
 .caroussel-wrapper{
   left: 0;

@@ -46,6 +46,10 @@
     right: 50px;
     height:  50px;
   }
+  .emoji-content-index{
+    font-size: 2em;
+    line-height: 50px;
+  }
   .caroussel-wrapper{
     top: 50px;
     width: calc(100% - 50px);
@@ -106,6 +110,10 @@
   .side-wrapper{
     right: 50px;
     height:  50px;
+  }
+  .emoji-content-index{
+    font-size: 3em;
+    line-height: 50px;
   }
   .caroussel-wrapper{
     top: 50px;
