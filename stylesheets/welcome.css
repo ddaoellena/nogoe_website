@@ -40,7 +40,7 @@
 .enter-track{
   cursor: pointer;
 }
-.enter-track:hover{
+.enter-track:hover, .track-index:hover{
   -webkit-animation-play-state: paused;
   -moz-animation-play-state: paused;
   -o-animation-play-state: paused;
@@ -78,8 +78,8 @@
   to { transform: translateX(0%); }
 }
 .marquee-left.remove-left{
-  transform: translateX(-100%);
+  transform: translateX(-110%);
 }
 .marquee.remove-right{
-  transform: translateX(100%);
+  transform: translateX(110%);
 }

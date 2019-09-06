@@ -74,7 +74,8 @@ var openBodies = {
   toString : "open-bodies",
   title: "Open Bodies",
   subTitle : "M.A. diploma project<br>2019",
-  description: ""
+  description: "",
+  imgs: ["open-bodies-1.png", "open-bodies-2.png"]
 }
 
 var openBodiesThesis = {
