@@ -74,7 +74,7 @@
       <div class="header-content" id="header-content"></div>
     </div>
 
-    <div class="caroussel-wrapper">
+    <div class="caroussel-wrapper" onclick="clickCaroussel()">
       <div class="caroussel-content displayed" id="caroussel-content">
         <div class="img-caroussel-wrapper">
           <img class="img-caroussel" id="img-caroussel-1" src="./assets/pics/caroussel-1.jpg" alt="">
@@ -100,6 +100,15 @@
           </div>
           <p class="project-subtitle" id="project-subtitle"></p>
           <p class="project-desc" id="project-desc"></p>
+        </div>
+        <div class="project-pics-wrapper" id="project-pics-wrapper">
+          <div class="project-pics-slide" id="project-pics-slide">
+          </div>
+          <div class="arrow-pic-div arrow-pic-prev"><span class="arrow-pic arrow-prev noselect" onclick="navigateSlide('prev')">←</span></div>
+          <div class="arrow-pic-div arrow-pic-next"><span class="arrow-pic arrow-next noselect" onclick="navigateSlide('next')">→</span></div>
+          <div class="nbr-pics-div" id="nbr-pics-div">
+            <span class="nbr-pics noselect" id="nbr-pics"></span>
+          </div>
         </div>
       </div>
     </div>
