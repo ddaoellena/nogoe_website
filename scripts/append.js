@@ -48,7 +48,7 @@ function centerImgs(){
   }
 }
 
-
+window.onresize = centerImgs;
 function initSlide(){
   centerImgs();
   for (var i = 2; i < projectPicsSlide.childNodes.length; i++) {
