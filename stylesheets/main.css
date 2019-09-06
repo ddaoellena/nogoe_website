@@ -21,7 +21,7 @@ textarea{
 /* common properties */
 .header-wrapper, .header-content, .header-work, .header-about, .footer-wrapper, .footer-smiley,
 .footer-mail, .footer-insta, .side-wrapper, .caroussel-wrapper, .caroussel-content, .project-text-wrapper,
-.project-pics-wrapper, .project-pics-slide, .nbr-pics-div, .arrow-pic-div, .copied-text{
+.project-pics-wrapper, .loading-pic-wrapper, .project-pics-slide, .nbr-pics-div, .arrow-pic-div, .copied-text{
   position: absolute;
 }
 .footer-smiley, .footer-mail, .footer-insta, .header-work, .header-about, .img-caroussel-wrapper, .arrow-pic{
@@ -192,6 +192,23 @@ a:hover, .footer-mail:hover, .footer-smiley:hover, .header-work:hover, .header-a
   background-color: #d6d6d6;
   z-index: 0;
 }
+.loading-pic-wrapper{
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 3;
+  background-color: #d6d6d6;
+}
+.loading-pic{
+  margin: auto;  /* Magic! */
+  max-width: 100%;
+  max-height: 100%;
+}
+.loading-pic-wrapper.hidden{
+  display: none;
+}
 .project-pics-slide{
   top: 0;
   left: 0;
@@ -229,7 +246,7 @@ a:hover, .footer-mail:hover, .footer-smiley:hover, .header-work:hover, .header-a
   height: 10vh;
   width: 10vh;
   bottom: 0;
-  z-index: 10;
+  z-index: 2;
   text-align: center;
   display:table;
 }

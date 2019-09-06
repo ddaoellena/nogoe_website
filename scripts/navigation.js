@@ -5,7 +5,8 @@ var welcomeWrapper = document.querySelector("#welcome-wrapper");
 var currentSlide = 1,
     maxSlides = 0;
 var projectPicsWrapper = document.querySelector("#project-pics-wrapper"),
-    projectPicsSlide = document.querySelector("#project-pics-slide");
+    projectPicsSlide = document.querySelector("#project-pics-slide"),
+    projectPics = document.getElementsByClassName('project-pic');
 
 function enterWebsite(){
   document.querySelector("#enter-wrapper").classList.add("hidden");
@@ -107,6 +108,10 @@ function setActiveProject(el){
 }
 
 function copyMail(){
+  var textArea = document.createElement("textarea");
+  textArea.setAttribute("id", "to-copy");
+  textArea.innerHTML = "kawakita.travail@gmail.com";
+  document.body.appendChild(textArea);
   var copyText = document.getElementById("to-copy");
   /* Select the text field */
   copyText.select();
@@ -124,6 +129,7 @@ function copyMail(){
   setTimeout(function(){
     copiedText.style.display = "none";
   }, 1500);
+  copyText.remove();
 }
 
 function clickCaroussel(){
@@ -133,7 +139,7 @@ function clickCaroussel(){
 }
 
 function navigateSlide(way){
-  for (var i = 1; i < projectPicsSlide.childNodes.length; i++) {
+  for (var i = 0; i < projectPicsSlide.childNodes.length; i++) {
     projectPicsSlide.childNodes[i].classList.add("hidden");
   }
   switch (way) {
@@ -151,7 +157,7 @@ function navigateSlide(way){
     break;
     default:
   }
-  projectPicsSlide.childNodes[currentSlide].classList.remove("hidden");
+  projectPicsSlide.childNodes[currentSlide-1].classList.remove("hidden");
   document.querySelector('#nbr-pics').innerHTML = currentSlide + "/" + maxSlides;
   console.log(currentSlide);
 }

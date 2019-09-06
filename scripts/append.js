@@ -22,6 +22,7 @@ function appendProject(el){
   projectSubtitle.innerHTML = window[el.dataset.id].subTitle;
   projectDesc.innerHTML = window[el.dataset.id].description;
   projectPicsSlide.innerHTML = "";
+  document.querySelector('#loading-pic-wrapper').classList.remove("hidden");
   for (var i = 0; i < imgArray.length; i++) {
     var projectImgDiv = document.createElement("div");
     var projectImg = document.createElement("img");
@@ -49,9 +50,22 @@ function centerImgs(){
 }
 
 window.onresize = centerImgs;
+
 function initSlide(){
   centerImgs();
   for (var i = 2; i < projectPicsSlide.childNodes.length; i++) {
     projectPicsSlide.childNodes[i].classList.add("hidden");
   }
+  var checkIfLoaded =
+  setInterval(function(){
+    if (projectPics[projectPics.length-1].complete) {
+        removeLoading();
+        clearInterval(checkIfLoaded);
+    }
+  }, 200)
+  currentSlide = 1;
+}
+
+function removeLoading(){
+  document.querySelector('#loading-pic-wrapper').classList.add("hidden");
 }
