@@ -56,8 +56,8 @@ var higuma = {
 
 var me3 = {
   toString : "me3",
-  title: "",
-  subTitle : "",
+  title: "me3",
+  subTitle : "me3",
   description: "",
   imgs: []
 }
