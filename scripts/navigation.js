@@ -10,6 +10,7 @@ var projectPicsWrapper = document.querySelector("#project-pics-wrapper"),
 
 function enterWebsite(){
   document.querySelector("#enter-wrapper").classList.add("hidden");
+
   for (var i = 0; i < document.getElementsByClassName("marquee-left").length; i++) {
     document.getElementsByClassName("marquee-left")[i].classList.add("remove-left");
   }
@@ -17,8 +18,11 @@ function enterWebsite(){
     document.getElementsByClassName("marquee-right")[i].classList.add("remove-right");
   }
   setTimeout(function(){
+    welcomeWrapper.classList.add("hidden");
+  }, 800)
+  setTimeout(function(){
     welcomeWrapper.remove();
-  }, 1000);
+  }, 1500);
 }
 
 function enterMouseOver(){
@@ -95,6 +99,23 @@ function openProject(el){
     document.querySelector("#work-content").classList.add("hidden");
     headerContent.innerHTML = "";}, 200);
   activeProject = window[el.dataset.id].toString;
+  setActiveProject(el);
+  appendProject(el);
+}
+
+function openProjectCarousel(el){
+  document.querySelector("#caroussel-content").remove();
+  document.querySelector("#project-content-wrapper").classList.add("displayed");
+  slideCollapsed = true;
+  if (document.querySelector("#work-content") !== null) {
+    if (document.querySelector("#work-content").classList.contains("displayed")) {
+      document.querySelector("#work-content").classList.remove("displayed");
+      setTimeout(function(){
+        document.querySelector("#work-content").classList.add("hidden");
+        headerContent.innerHTML = "";}, 200);
+      activeProject = window[el.dataset.id].toString;
+    }
+  }
   setActiveProject(el);
   appendProject(el);
 }

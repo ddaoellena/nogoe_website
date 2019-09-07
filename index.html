@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <div class="init-loading-wrapper" id="init-loading-wrapper">
+      <img class="loading-pic" src="./assets/icons/loading.gif"></img>
+    </div>
     <div class="welcome-wrapper" id="welcome-wrapper">
       <div class="marquee emoji-wrapper marquee-left" id="first-marquee">
         <div class="track track-welcome track-left">
@@ -77,7 +80,7 @@
     <div class="caroussel-wrapper" onclick="clickCaroussel()">
       <div class="caroussel-content displayed" id="caroussel-content">
         <div class="img-caroussel-wrapper">
-          <img class="img-caroussel" id="img-caroussel-1" src="./assets/pics/caroussel-1.jpg" alt="">
+          <img class="img-caroussel" id="img-caroussel-1" src="./assets/pics/caroussel-1.png" data-id="openBodies" onclick="openProjectCarousel(this)">
         </div>
         <div class="img-caroussel-wrapper">
           <img class="img-caroussel" id="img-caroussel-2" src="./assets/pics/caroussel-2.jpg" alt="">
@@ -86,10 +89,10 @@
           <img class="img-caroussel" id="img-caroussel-3" src="./assets/pics/caroussel-3.jpg" alt="">
         </div>
         <div class="img-caroussel-wrapper">
-          <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/caroussel-4.jpg" alt="">
+          <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/caroussel-4.png" alt="">
         </div>
         <div class="img-caroussel-wrapper">
-          <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/caroussel-5.jpg" alt="">
+          <img class="img-caroussel" id="img-caroussel-4" src="./assets/pics/caroussel-5.png" alt="">
         </div>
       </div>
       <div class="project-content-wrapper hidden" id="project-content-wrapper">

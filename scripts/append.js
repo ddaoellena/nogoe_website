@@ -37,21 +37,18 @@ function appendProject(el){
   maxSlides = imgArray.length;
 }
 
-function centerImgs(){
+function centerProjectImgs(){
   var projectPicsDiv = document.getElementsByClassName("project-pic-div")
       projectPics = document.getElementsByClassName("project-pic");
   for (var i = 0; i < projectPicsDiv.length; i++) {
     var leftOffset = (projectPicsDiv[i].getBoundingClientRect().width - projectPicsWrapper.getBoundingClientRect().width)/2;
-    if (leftOffset > 0) {
       projectPicsDiv[i].style.left = -leftOffset + "px";
-    }
+
   }
 }
 
-window.onresize = centerImgs;
-
 function initSlide(){
-  centerImgs();
+  centerProjectImgs();
   for (var i = 2; i < projectPicsSlide.childNodes.length; i++) {
     projectPicsSlide.childNodes[i].classList.add("hidden");
   }
