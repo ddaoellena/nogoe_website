@@ -32,7 +32,6 @@ function appendProject(el){
     projectImg.setAttribute("src", "./assets/pics/"+imgArray[i]);
     projectImgDiv.appendChild(projectImg);
     projectPicsSlide.appendChild(projectImgDiv);
-    document.querySelector('#nbr-pics').innerHTML = currentSlide + "/" + imgArray.length;
   }
   setTimeout(initSlide, 20);
   maxSlides = imgArray.length;
@@ -64,6 +63,7 @@ function initSlide(){
     }
   }, 200)
   currentSlide = 1;
+  displayCurrentSlide();
 }
 
 function removeLoading(){

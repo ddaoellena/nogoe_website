@@ -139,9 +139,6 @@ function clickCaroussel(){
 }
 
 function navigateSlide(way){
-  for (var i = 0; i < projectPicsSlide.childNodes.length; i++) {
-    projectPicsSlide.childNodes[i].classList.add("hidden");
-  }
   switch (way) {
     case "prev":
       currentSlide -= 1;
@@ -157,7 +154,14 @@ function navigateSlide(way){
     break;
     default:
   }
+  displayCurrentSlide();
+  console.log(currentSlide);
+}
+
+function displayCurrentSlide(){
+  for (var i = 0; i < projectPicsSlide.childNodes.length; i++) {
+    projectPicsSlide.childNodes[i].classList.add("hidden");
+  }
   projectPicsSlide.childNodes[currentSlide-1].classList.remove("hidden");
   document.querySelector('#nbr-pics').innerHTML = currentSlide + "/" + maxSlides;
-  console.log(currentSlide);
 }
